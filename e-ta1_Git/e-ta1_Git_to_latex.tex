@@ -1,0 +1,376 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{article}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\hypersetup{
+  pdftitle={e-TA 1: Version control with Git(Hub)},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+\urlstyle{same} % disable monospaced font for URLs
+\usepackage[margin=1in]{geometry}
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\ifluatex
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+
+\title{e-TA 1: Version control with Git(Hub)}
+\author{true}
+\date{}
+
+\begin{document}
+\maketitle
+
+Hello! Welcome to e-TAs, your on-line help for ECON 4676. So you want to
+learn how to use Github. In this e-TA, you will learn the intricacies
+and specifics of working with Github and strategies to keep your file
+version control under your control. The present issue focuses on the
+basic operations of \texttt{Git} and \texttt{Github}. The core material
+was extracted from tutorials at the
+\href{https://www.uiuc-bdeep.org/about}{BDEEP group} at
+\href{http://www.ncsa.illinois.edu/site}{NCSA} and
+\href{https://grantmcdermott.com/}{Prof.~Grant McDermott} \footnote{If
+  you have comments, suggestions, etc. please submit a pull request ;).}
+
+\hypertarget{motivation}{%
+\section{Motivation}\label{motivation}}
+
+\hypertarget{github-solves-this-problem}{%
+\subsection{Git(Hub) solves this
+problem}\label{github-solves-this-problem}}
+
+\hypertarget{git}{%
+\subsubsection{Git}\label{git}}
+
+\begin{itemize}
+\tightlist
+\item
+  Git is a distributed version control system. (Wait, what?)
+\item
+  Okay, try this: Imagine if Dropbox and the ``Track changes'' feature
+  in MS Word had a baby. Git would be that baby.
+\item
+  In fact, it's even better than that because Git is optimized for the
+  things that economists and data scientists spend a lot of time working
+  on (e.g.~code).
+\item
+  There is a learning curve, but I promise you it's worth it.
+\end{itemize}
+
+\hypertarget{github}{%
+\subsubsection{GitHub}\label{github}}
+
+\begin{itemize}
+\tightlist
+\item
+  It's important to realize that Git and GitHub are distinct things.
+\item
+  GitHub is an online hosting platform that provides an array of
+  services built on top of the Git system. (Similar platforms include
+  Bitbucket and GitLab.)
+\item
+  Just like we don't \emph{need} Rstudio to run R code, we don't
+  \emph{need} GitHub to use Git\ldots{} But it will make our lives so
+  much easier.
+\end{itemize}
+
+\hypertarget{repositories}{%
+\section{Repositories}\label{repositories}}
+
+When you begin a new coding project, you will want to create a new
+repository. This repository will grow to hold all of the important files
+for your project.
+
+\hypertarget{create-a-repository}{%
+\subsubsection{Create a repository}\label{create-a-repository}}
+
+You can create a new repository by clicking the green ``new repository''
+button on your github homepage.
+
+\begin{itemize}
+\item
+  Step 1: Name your repository Give your repository an accurate and
+  concise name. You want the project to be recognizable! You can also
+  add an optional description to summarize the goal of your project.
+\item
+  Step 2: Public or private Most repositories should be made public
+  unless you have a specific reason to make it private. A public
+  repository can be viewed by anyone but you can choose who can commit
+  to it. Since it can be seen by others, it is possible to collaborate
+  with others if you need help. A private repository can only be viewed
+  by you and you are the only person who can commit to it, but you are
+  able to manually add other collaborators as well. Private
+  reposoitories are only available for paid accounts.
+\item
+  Step 3: Add a README Finally, select ``initialize with a README''. You
+  should only keep this unchecked if you are creating a repository from
+  an existing repository.
+\item
+  Step 4: Licence The license dropdown allows you to select a license if
+  you are sharing open source software.
+\item
+  Step 5: gitignore dropdown allows you to choose any file types that
+  will not be committed
+\end{itemize}
+
+\hypertarget{repositories-1}{%
+\section{Repositories}\label{repositories-1}}
+
+Congratulations! Now you have created your own repository! Once you have
+a repository on GitHub, here is how you link it to your computer. This
+section is more code based side, with the specific commands you will
+need to use to get version control working for you!
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi})}
+\item
+  First you need to get your repo url
+\item
+  Open up your command line tool, and write \texttt{git\ clone} with the
+  url you copied. For example:
+\end{enumerate}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{$ }\FunctionTok{git}\NormalTok{ clone https://github.com/ignaciomsarmiento/test\_repo.git}
+\end{Highlighting}
+\end{Shaded}
+
+Now the repo is in your local computer. You can see for example your
+commit history (hit spacebar to scroll down or q to exit).
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{$ }\FunctionTok{git}\NormalTok{ log}
+\end{Highlighting}
+\end{Shaded}
+
+or what has changed?
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{$ }\FunctionTok{git}\NormalTok{ status}
+\end{Highlighting}
+\end{Shaded}
+
+to add files
+
+Stage (``add'') a file or group of files.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{$ }\FunctionTok{git}\NormalTok{ add NAME{-}OF{-}FILE{-}OR{-}FOLDER}
+\end{Highlighting}
+\end{Shaded}
+
+You can use
+\href{https://ryanstutorials.net/linuxtutorial/wildcards.php}{wildcard}
+characters to stage a group of files (e.g.~sharing a common prefix).
+There are a bunch of useful flag options too:
+
+\begin{itemize}
+\tightlist
+\item
+  Stage all files.
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{$ }\FunctionTok{git}\NormalTok{ add {-}A}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{itemize}
+\tightlist
+\item
+  Stage updated files only (modified or deleted, but not new).
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{$ }\FunctionTok{git}\NormalTok{ add {-}u}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{itemize}
+\tightlist
+\item
+  Stage new files only (not updated).
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{$ }\FunctionTok{git}\NormalTok{ add .}
+\end{Highlighting}
+\end{Shaded}
+
+Commit your changes.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{$ }\FunctionTok{git}\NormalTok{ commit {-}m }\StringTok{"Helpful message"}
+\end{Highlighting}
+\end{Shaded}
+
+Pull from the upstream repository (i.e.~GitHub).
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{$ }\FunctionTok{git}\NormalTok{ pull}
+\end{Highlighting}
+\end{Shaded}
+
+Push any local changes that you've committed to the upstream repo
+(i.e.~GitHub).
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{$ }\FunctionTok{git}\NormalTok{ push origin master}
+\end{Highlighting}
+\end{Shaded}
+
+\texttt{origin} is a shorthand name for the remote repository that a
+project was originally cloned from. and \texttt{master} the branch we
+are pushing to.
+
+\hypertarget{forking}{%
+\section{Forking}\label{forking}}
+
+Forking is going to be the way to contribute to my lectures, e-TAs, etc,
+and get those precious participation points
+
+\begin{itemize}
+\item
+  In fact, if you fork a repo then you are really creating a copy of it.
+\item
+  Forking a repo on GitHub is
+  \href{https://help.github.com/articles/fork-a-repo/}{very simple};
+  just click the ``Fork'' button in the top-right corner of said repo.
+\item
+  This will create an independent copy of the repo under your GitHub
+  account.
+\item
+  Once you fork a repo, you are free to do anything you want to it.
+  (It's yours.) However, forking --- in combination with pull requests
+  --- is actually how much of the world's software is developed. For
+  example:
+\item
+  Outside user \emph{B} forks \emph{A}'s repo. She adds a new feature
+  (or fixes a bug she's identified) and then
+  \href{https://help.github.com/articles/creating-a-pull-request-from-a-fork/}{issues
+  an upstream pull request}.
+\item
+  \emph{A} is notified and can then decide whether to merge \emph{B}'s
+  contribution with the main project.
+\end{itemize}
+
+\hypertarget{branches}{%
+\section{Branches}\label{branches}}
+
+\textbf{Incomplete Section:} the best pull requests for this section get
+some bonus points =)
+
+\hypertarget{if-things-go-wrong}{%
+\section{If Things go Wrong}\label{if-things-go-wrong}}
+
+\textbf{Q: What happens when something goes wrong?}
+
+\textbf{A: Think: ``Oh shit, Git!''} - Seriously:
+\url{http://ohshitgit.com/}.
+
+\textbf{Q: What happens when something goes horribly wrong?}
+
+\textbf{A: Burn it down and start again.} -
+\url{http://happygitwithr.com/burn.html} - This is a great advantage of
+Git's distributed nature. If something goes horribly wrong, there's
+usually an intact version somewhere else.
+
+\end{document}
