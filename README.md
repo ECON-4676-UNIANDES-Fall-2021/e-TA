@@ -8,7 +8,7 @@ Hello! Welcome to e-TAs, your on-line help for ECON 4676. This page contains the
 
 ## [e-TA 2: Brief Introduction to R](https://raw.githack.com/ECON-4676-UNIANDES-Fall-2021/e-TA/master/e-ta2_R/e-ta2_R.html)
 
-## [e-TA 3: Brief Introduction to Python]()
+## [e-TA 3: Brief Introduction to Python](https://github.com/ECON-4676-UNIANDES-Fall-2021/e-TA/blob/main/e-ta3_python/e-ta3_python.ipynb)
 
 
 
