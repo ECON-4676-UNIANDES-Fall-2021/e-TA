@@ -10,7 +10,7 @@ Hello! Welcome to e-TAs, your on-line help for ECON 4676. This page contains the
 
 ## [e-TA 3: Brief Introduction to Python](https://github.com/ECON-4676-UNIANDES-Fall-2021/e-TA/blob/main/e-ta3_python/e-ta3_python.ipynb)
 
-
+## [e-TA 4: Webscraping Basics](https://github.com/ECON-4676-UNIANDES-Fall-2021/e-TA/blob/main/e-ta4_webscraping_basics/e-ta4_webscraping_basics.ipynb)
 
 ## License
 

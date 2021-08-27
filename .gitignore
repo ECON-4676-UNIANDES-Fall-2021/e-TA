@@ -1,6 +1,9 @@
 # Created by https://www.toptal.com/developers/gitignore/api/macos,r
 # Edit at https://www.toptal.com/developers/gitignore?templates=macos,r
 
+
+## ipynb
+.ipynb_checkpoints
 ### macOS ###
 # General
 .DS_Store
