@@ -12,6 +12,8 @@ Hello! Welcome to e-TAs, your on-line help for ECON 4676. This page contains the
 
 ## [e-TA 4: Webscraping Basics](https://github.com/ECON-4676-UNIANDES-Fall-2021/e-TA/blob/main/e-ta4_webscraping_basics/e-ta4_webscraping_basics.ipynb)
 
+## [e-TA 5: Webscraping Selenium](https://github.com/ECON-4676-UNIANDES-Fall-2021/e-TA/blob/main/e-ta5_webscraping_basics/e-ta5_webscraping_selenium.ipynb)
+
 ## License
 
 The material in this repository is made available under the [MIT license](http://opensource.org/licenses/mit-license.php). 
