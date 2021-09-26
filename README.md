@@ -19,7 +19,7 @@ Hello! Welcome to e-TAs, your on-line help for ECON 4676. This page contains the
 
 ## [e-TA 7: Spatial Data](https://github.com/ECON-4676-UNIANDES-Fall-2021/e-TA/blob/main/e-ta7_Spatial_Data/e-ta7_Spatial_Data.ipynb)
 
-## [e-TA 8: Spatial Data](https://github.com/ECON-4676-UNIANDES-Fall-2021/e-TA/blob/main/e-ta8_Spatial_models.ipynb)
+## [e-TA 8: Spatial Models](https://github.com/ECON-4676-UNIANDES-Fall-2021/e-TA/blob/main/e-ta8_Spatial_models/e-ta8_Spatial_models.ipynb)
 
 
 ## License
