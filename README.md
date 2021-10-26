@@ -21,6 +21,8 @@ Hello! Welcome to e-TAs, your on-line help for ECON 4676. This page contains the
 
 ## [e-TA 8: Spatial Models](https://github.com/ECON-4676-UNIANDES-Fall-2021/e-TA/blob/main/e-ta8_Spatial_models/e-ta8_Spatial_models.ipynb)
 
+## [e-TA 9: Overfit and Cross-validation](https://github.com/ECON-4676-UNIANDES-Fall-2021/e-TA/blob/main/e-ta9_Overfit_and_cross_validation/Cross_validation_and_overfit.ipynb)
+
 
 ## License
 
