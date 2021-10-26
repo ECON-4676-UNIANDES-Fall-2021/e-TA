@@ -1,6 +1,7 @@
 # Created by https://www.toptal.com/developers/gitignore/api/macos,r
 # Edit at https://www.toptal.com/developers/gitignore?templates=macos,r
 
+e-ta8_Spatial_models/clase.csv.gz
 
 ## ipynb
 .ipynb_checkpoints
@@ -84,3 +85,5 @@ vignettes/*.pdf
 
 # End of https://www.toptal.com/developers/gitignore/api/macos,r
 
+./e-ta8_Spatial_models/clase.csv.gz
+./.git/objects/9a/8637ef23570bf82ed348acb2fcab362e786496
