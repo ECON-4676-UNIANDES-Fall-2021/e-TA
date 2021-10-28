@@ -23,6 +23,7 @@ Hello! Welcome to e-TAs, your on-line help for ECON 4676. This page contains the
 
 ## [e-TA 9: Overfit and Cross-validation](https://github.com/ECON-4676-UNIANDES-Fall-2021/e-TA/blob/main/e-ta9_Overfit_and_cross_validation/Cross_validation_and_overfit.ipynb)
 
+## [e-TA 10: Classification](https://github.com/ECON-4676-UNIANDES-Fall-2021/e-TA/blob/main/e-ta10_Classification/Classification.ipynb)
 
 ## License
 
