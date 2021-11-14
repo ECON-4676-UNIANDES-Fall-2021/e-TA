@@ -27,6 +27,7 @@ Hello! Welcome to e-TAs, your on-line help for ECON 4676. This page contains the
 
 ## [e-TA 11: Trees and Random Forests](https://github.com/ECON-4676-UNIANDES-Fall-2021/e-TA/blob/main/e-ta11_trees_and_random_forest/Decision%20trees%2C%20Random%20forest%20and%20GBM.ipynb)
 
+## [e-TA 12: Text as data](https://github.com/ECON-4676-UNIANDES-Fall-2021/e-TA/blob/main/e-ta12_text_as_data/text_as_data.ipynb)
 
 ## License
 
