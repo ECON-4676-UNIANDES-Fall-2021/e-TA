@@ -29,6 +29,7 @@ Hello! Welcome to e-TAs, your on-line help for ECON 4676. This page contains the
 
 ## [e-TA 12: Text as data](https://github.com/ECON-4676-UNIANDES-Fall-2021/e-TA/blob/main/e-ta12_text_as_data/text_as_data.ipynb)
 
+## [e-TA 13: Text as data 2](https://uniandes-my.sharepoint.com/personal/r_cano_uniandes_edu_co/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fr%5Fcano%5Funiandes%5Fedu%5Fco%2FDocuments%2FBDL%2FGrabaciones%20complementarias%2FComplementaria%2013)
 ## License
 
 The material in this repository is made available under the [MIT license](http://opensource.org/licenses/mit-license.php). 
